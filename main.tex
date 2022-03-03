@@ -1,0 +1,42 @@
+% defining document class
+\documentclass[12pt]{report}
+
+%importing packages
+\usepackage[portuguese]{babel} % pt-br
+\usepackage[utf8]{inputenc} % to use pt-br characters
+\usepackage{graphicx} % to show images
+\usepackage{color} %to use colors
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	citecolor=blue,
+} % for citations
+
+
+%formating
+\usepackage{indentfirst} % ident firs line
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+\usepackage{microtype} % justify text
+\usepackage[sfdefault]{carlito} % compatible with calibri font
+\usepackage[a4paper, total={6in, 8in}]{geometry} % formating
+
+\begin{document}
+	
+	\input{titlepage}
+	
+	% table of contents
+	\tableofcontents
+	
+	%including text
+	\include{capitulo_1/main}
+	
+	%references
+	\bibliographystyle{apalike}
+	\bibliography{bibliografia}{} 
+	
+\end{document}
+
